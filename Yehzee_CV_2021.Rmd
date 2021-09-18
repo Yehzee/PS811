@@ -1,0 +1,73 @@
+---
+title: "Curriculum Vitae"
+author: "Yehzee Ryoo"
+date: "`r Sys.Date()`"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Department address
+University of Wisconsin-Madison, Madison, WI 53706
+
+## Email address
+yryoo2@wisc.edu
+
+## Other contact info
++1 (608) 733 9740
+
+## Education
+2021--26 Ph.D., Political Science, University of Wisconsin Madison (Degree Expected in August 2026) 
+
+2019--21 M.A., Political Science, Korea University
+
+2015--19 B.A., Political Science, Psychology (Double Major), Korea University
+
+Eberhard Karls University of Tuebingen, Germany, Exchange Student
+
+
+
+## Research experience
+
+Research Assistant for Prof. Sung Eun Kim, Korea University.                                                                                          Jul.2020 - Dec.2020
+
+- Assisted the collaborative research project on foreign  aid and soft power, funded by the National Research Council for Economics, Humanities, and Social Sciences under the Prime Minster's Office
+- Assisted designing, implementing and analyzing conjoint experiments and survey experiments on public attitudes toward foreign aid and soft power strategies in 16 countries 
+
+
+
+## Conference presentation 
+
+**Tolerate or Condemn: Foreign Electoral Intervention and Democratic Public Opinion**
+
+- This paper demonstrates that the public are less likely to disapprove an electoral intervention when their own country is meddling into other countries. My findings from an original survey experiment suggest that democratic citizens show strong antipathy only when using money for an intervention.
+- *Presented at the 2020 Annual Meeting of Korean Political Science Association*
+
+**Losing Hearts and Minds? Unpacking the Effect of Chinese Aid on Soft Power (with Sung Eun Kim and Sujin Cha)**
+
+- This paper examines the effects of Chinese aid projects and Confucius Institutes on the public perception in Africa. By utilizing the geo-coded location data, we find that Chinese aid projects have negative effects on the public perception of China while Confuciuns Institutes have positive effects on it.
+- *Presented at the 2021 Annual Convention of the International Studies Association*
+
+
+
+## Teaching experience
+
+**R Teaching Workshop**  Korea University, Seoul, Republic of Korea                                                                                                 Feb.2021
+
+- Lectured R programming including data wrangling and visualization to the graduate students in the Winter R Camp. 
+
+**Undergraduate Mentoring Program** Korea University & Jeju National University, Republic of Korea                  Jan.2021 - Feb.2021         
+
+- Instructed undergraduate students in Jeju national university about how to write a thesis, from setting a research topic to research designing, data collecting, and then actual writing. 
+
+
+
+## Language and skills
+
+- R, STATA, Python,  LaTeX
+
