@@ -1,0 +1,93 @@
+---
+title: "Graphics"
+author: "Yehzee Ryoo"
+date: "11/19/2020"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Create the following graphs in `ggplot2`.
+
+1. Check out the base R built-in dataset, `data("USArrests")`.
+
+```{r}
+setwd("~/Library/Mobile Documents/com~apple~CloudDocs/1. PS materials/PS 811/Week7")
+
+#library("here")
+library("tidyverse")
+library("tidylog") # gives feedback about data manipulation
+
+US <- datasets::USArrests
+```
+
+2. Create a scatterplot that looks at the correlation between murder and assault arrests. Label the x and y axes and title the graph.
+
+```{r}
+p_scatter <- ggplot(US, aes(x=Murder, y=Assault)) + geom_point() + labs(x= "Murder", y="Assault", title="Correlation between murder and assualt arrests")
+
+p_scatter
+```
+
+
+3. Create a boxplot of rape arrests. Label the plot.
+
+```{r}
+p_box <-ggplot(US, aes(x=Rape)) + geom_boxplot() + labs(x= "Rape", title="Boxplot Rape")
+
+p_box  
+```
+
+
+4. Create a barplot of the number of rape arrests per state.
+
+```{r}
+US$State <- c(rownames(US))
+
+p_bar <- ggplot(data= US, aes(x = State, y= Rape)) + 
+  geom_bar(stat = 'identity') + 
+  theme(axis.text = element_text(size = 9, angle = 30)) + 
+  scale_x_discrete(guide = guide_axis(check.overlap = TRUE))+
+  labs(title = "Number of Rape arrests per State")
+#scale_x_discrete(guide = guide_axis(n.dodge=2)) is also a good way to make the labels not overlap 
+
+p_bar
+```
+
+
+5. Create a histogram for the percent of urban population.
+
+```{r}
+
+p_perc <- ggplot(US, aes(UrbanPop)) + geom_histogram(aes(y=stat(density)), bins = 12, color = "White")+ scale_x_continuous(limits=c(35, 93), breaks = seq(from = 35, to = 93, by = 5)) +labs(title = "The percentage of Urban Population")+ ylab("Percentage") + xlab("Uraban Population")
+
+p_perc
+```
+
+
+
+# Your project
+
+Now it's your turn. Use the `ggplot2` tools you used today to conduct data analysis for one of your final seminar papers.
+
+1. Create a Git repository for your project.
+
+2. Upload the dataset you are planning to use. If are you planning to collect original data, please provide all the variables that will be in that original dataseet.
+
+3. How will these variables help answer your question?
+
+4. Consider the variables. Which variables would you want to highlight? How would you visually represent them? Plan to create at least three descriptive graphs. Some suggestions:
+
+    + If you have time-related variable, create a line graph showing changes over time!
+    
+    + If your observations can be separated by certain groups, create bar graphs or facets~
+
+5. Given what you brainstormed in Question 4, create plots using the `ggplot2` package. Label all axes and title each graph. Provide descriptions for each graph.
+
+# Submit
+
+Email me (laaker@wisc.edu) the link to your github when you are done.
